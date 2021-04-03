@@ -76,9 +76,9 @@ unsigned GetLocalLabel (void)
     PRECONDITION (CurrentFunctionSegment != 0);
 
     /* Check for an overflow */
-    if (CurrentFunctionSegment->NextLabel >= 0xFFFF) {
-        Internal ("Local label overflow");
-    }
+    // if (CurrentFunctionSegment->NextLabel >= 0xFFFF) {
+    //     Internal ("Local label overflow");
+    // }
 
     /* Return the next label */
     return ++CurrentFunctionSegment->NextLabel;
